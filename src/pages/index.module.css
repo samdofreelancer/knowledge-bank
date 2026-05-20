@@ -1,0 +1,122 @@
+import styles from './index.module.css';
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBanner h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+
+.heroBanner p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.features {
+  padding: 3rem 0;
+  background-color: var(--ifm-color-gray-100);
+}
+
+.feature {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featureLink {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.featureLink:hover {
+  text-decoration: none;
+}
+
+.featureLink:hover h3 {
+  color: var(--ifm-color-primary);
+}
+
+.highlights {
+  padding: 4rem 0;
+}
+
+.highlights h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.highlights h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlights p {
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+.quickLinks {
+  padding: 3rem 0;
+  background-color: var(--ifm-color-gray-100);
+  text-align: center;
+}
+
+.quickLinks h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.quickLinks .button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .heroBanner h1 {
+    font-size: 2rem;
+  }
+
+  .heroBanner p {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .button {
+    width: 100%;
+  }
+
+  .features {
+    padding: 2rem 0;
+  }
+
+  .feature {
+    margin-bottom: 2rem;
+  }
+
+  .highlights {
+    padding: 2rem 0;
+  }
+
+  .highlights h3 {
+    font-size: 1.25rem;
+  }
+}
