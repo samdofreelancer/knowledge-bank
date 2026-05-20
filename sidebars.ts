@@ -14,15 +14,7 @@ const sidebars: SidebarsConfig = {
         'kubernetes/deployment',
         'kubernetes/statefulsets',
         'kubernetes/services',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Advanced Topics',
-      items: [
         'kubernetes/ingress',
-        'kubernetes/storage',
-        'kubernetes/networking',
       ],
     },
     {
@@ -38,24 +30,6 @@ const sidebars: SidebarsConfig = {
       id: 'gcp/overview',
       label: 'GCP Overview',
     },
-    {
-      type: 'category',
-      label: 'Compute Services',
-      items: [
-        'gcp/cloud-run',
-        'gcp/gke',
-        'gcp/compute-engine',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Best Practices',
-      items: [
-        'gcp/security',
-        'gcp/optimization',
-        'gcp/monitoring',
-      ],
-    },
   ],
 
   cicdNav: [
@@ -69,17 +43,6 @@ const sidebars: SidebarsConfig = {
       label: 'Pipeline Design',
       items: [
         'cicd/pipeline-design',
-        'cicd/release-strategy',
-        'cicd/version-control',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Best Practices',
-      items: [
-        'cicd/security',
-        'cicd/testing',
-        'cicd/deployment-patterns',
       ],
     },
   ],
@@ -95,8 +58,6 @@ const sidebars: SidebarsConfig = {
       label: 'Getting Started',
       items: [
         'github-actions/workflow-basics',
-        'github-actions/trigger-events',
-        'github-actions/actions-marketplace',
       ],
     },
     {
@@ -105,16 +66,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'github-actions/self-hosted-runner',
         'github-actions/reusable-workflows',
-        'github-actions/matrix-builds',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Security',
-      items: [
-        'github-actions/secrets-management',
-        'github-actions/permissions',
-        'github-actions/oidc',
       ],
     },
   ],
@@ -124,23 +75,6 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       id: 'jenkins/overview',
       label: 'Jenkins Overview',
-    },
-    {
-      type: 'category',
-      label: 'Migration to GitHub Actions',
-      items: [
-        'jenkins/migration-guide',
-        'jenkins/groovy-to-yaml',
-        'jenkins/plugin-equivalents',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Reference',
-      items: [
-        'jenkins/declarative-pipeline',
-        'jenkins/shared-libraries',
-      ],
     },
   ],
 
@@ -156,16 +90,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'runbooks/production-incident',
         'runbooks/rollback-procedure',
-        'runbooks/emergency-scaling',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Maintenance',
-      items: [
-        'runbooks/cluster-upgrade',
-        'runbooks/database-maintenance',
-        'runbooks/certificate-rotation',
       ],
     },
   ],
@@ -182,25 +106,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'troubleshooting/pod-crashloopbackoff',
         'troubleshooting/imagepullbackoff',
-        'troubleshooting/oomkilled',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Cluster Issues',
-      items: [
-        'troubleshooting/node-not-ready',
-        'troubleshooting/persistent-volume-pending',
-        'troubleshooting/network-connectivity',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Application Issues',
-      items: [
-        'troubleshooting/high-cpu-usage',
-        'troubleshooting/high-memory-usage',
-        'troubleshooting/slow-queries',
       ],
     },
   ],

@@ -182,7 +182,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash', 'yaml', 'javascript', 'typescript', 'python', 'java', 'dockerfile', 'sql'],
+      additionalLanguages: ['bash', 'yaml', 'javascript', 'typescript', 'python', 'java', 'sql'],
     },
     colorMode: {
       defaultMode: 'light',
