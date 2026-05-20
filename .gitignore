@@ -37,4 +37,3 @@ Thumbs.db
 .docusaurus/
 .cache-loader/
 .cache/
-package-lock.json
