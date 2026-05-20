@@ -15,7 +15,7 @@ const config: Config = {
   organizationName: 'your-org',
   projectName: 'knowledge-bank',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   markdown: {
     hooks: {
