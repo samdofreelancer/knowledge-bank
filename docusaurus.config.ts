@@ -16,7 +16,12 @@ const config: Config = {
   projectName: 'knowledge-bank',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -30,8 +35,8 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/your-org/knowledge-bank/tree/main/',
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
         },
         blog: {
           showReadingTime: true,
