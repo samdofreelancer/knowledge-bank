@@ -23,17 +23,12 @@ jobs:
   build:
     name: Build Documentation
     runs-on: ubuntu-latest
+    container: node:24
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Full history for better dates
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -62,16 +57,11 @@ jobs:
   test-links:
     name: Test Links (PR only)
     runs-on: ubuntu-latest
+    container: node:24
     if: github.event_name == 'pull_request'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -90,15 +80,10 @@ jobs:
   validate:
     name: Validate Documentation
     runs-on: ubuntu-latest
+    container: node:24
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
