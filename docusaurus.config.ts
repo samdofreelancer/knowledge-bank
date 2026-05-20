@@ -61,34 +61,35 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'kubernetesNav',
+          label: 'CI/CD Ecosystem',
           position: 'left',
-          label: 'Kubernetes',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'gcpNav',
-          position: 'left',
-          label: 'GCP',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cicdNav',
-          position: 'left',
-          label: 'CI/CD',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'githubActionsNav',
-          position: 'left',
-          label: 'GitHub Actions',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'jenkinsNav',
-          position: 'left',
-          label: 'Jenkins',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'kubernetesNav',
+              label: 'Kubernetes',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'gcpNav',
+              label: 'GCP',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'githubActionsNav',
+              label: 'GitHub Actions',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'jenkinsNav',
+              label: 'Jenkins',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cicdNav',
+              label: 'CI/CD Practices',
+            },
+          ],
         },
         {
           type: 'docSidebar',
