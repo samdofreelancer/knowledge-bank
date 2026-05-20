@@ -30,6 +30,11 @@ const sidebars: SidebarsConfig = {
       id: 'gcp/overview',
       label: 'GCP Overview',
     },
+    {
+      type: 'doc',
+      id: 'gcp/workload-identity-federation',
+      label: 'Workload Identity Federation',
+    },
   ],
 
   cicdNav: [
