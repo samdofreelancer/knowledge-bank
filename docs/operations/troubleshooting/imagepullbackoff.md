@@ -318,7 +318,7 @@ docker push ghcr.io/my-org/myapp:latest
 ## Related Issues
 
 - [Pod CrashLoopBackOff](./pod-crashloopbackoff.md)
-- [Registry Authentication](../../ci-cd/cicd/registry-setup.md)
+- [Registry Authentication](../../ci-cd/cd/registry-setup.md)
 - [Network Connectivity](../kubernetes/networking.md)
 
 ---

@@ -164,16 +164,22 @@ function generateNavbarItems() {
         const navKey = camelCaseSubDir + 'Nav';
         
         // Format label for sub-folder
-        const subLabel = subDir
-          .split('-')
-          .map((word, index) => {
-            // Special cases
-            if (word === 'gcp') return 'GCP';
-            if (word === 'ci' && index === 0) return 'CI/CD';
-            if (word === 'github') return 'GitHub';
-            return word.charAt(0).toUpperCase() + word.slice(1);
-          })
-          .join(' ');
+        let subLabel;
+        if (subDir === 'ci') {
+          subLabel = 'Continuous Integration';
+        } else if (subDir === 'cd') {
+          subLabel = 'Continuous Delivery';
+        } else {
+          subLabel = subDir
+            .split('-')
+            .map((word, index) => {
+              // Special cases
+              if (word === 'gcp') return 'GCP';
+              if (word === 'github') return 'GitHub';
+              return word.charAt(0).toUpperCase() + word.slice(1);
+            })
+            .join(' ');
+        }
         
         dropdownItems.push({
           type: 'docSidebar',

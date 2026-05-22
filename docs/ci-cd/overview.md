@@ -11,7 +11,8 @@ Comprehensive guide to Continuous Integration and Continuous Deployment practice
 
 Choose a topic from the sidebar to get started!
 
-- [CI/CD Practices](/docs/ci-cd/cicd/overview)
+- [Continuous Integration](/docs/ci-cd/ci/overview)
+- [Continuous Delivery](/docs/ci-cd/cd/overview)
 - [GCP Integration](/docs/ci-cd/gcp/overview)
 - [GitHub Actions](/docs/ci-cd/github-actions/overview)
 - [Jenkins Migration](/docs/ci-cd/jenkins/overview)
