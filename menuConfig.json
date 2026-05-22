@@ -1,0 +1,4 @@
+{
+  "visibleMenus": ["ci-cd", "gitops-best-practices", "operations"],
+  "hiddenMenus": ["guidelines"]
+}

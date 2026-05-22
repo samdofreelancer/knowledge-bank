@@ -2,6 +2,22 @@ const fs = require('fs');
 const path = require('path');
 
 /**
+ * Load menu configuration from menuConfig.json
+ */
+function loadMenuConfig() {
+  try {
+    const configPath = path.join(__dirname, 'menuConfig.json');
+    const configContent = fs.readFileSync(configPath, 'utf8');
+    return JSON.parse(configContent);
+  } catch (error) {
+    console.warn('menuConfig.json not found or invalid, using defaults');
+    return { visibleMenus: [], hiddenMenus: [] };
+  }
+}
+
+const menuConfig = loadMenuConfig();
+
+/**
  * Auto-generate sidebar from docs folder structure
  * Recursively scans directories and creates categories with documents
  */
@@ -60,13 +76,15 @@ function kebabToCamel(str) {
 /**
  * Generate complete sidebar configuration
  * Returns object with auto-generated navs for each directory (top-level and nested)
+ * Respects hiddenMenus from menuConfig.json
  */
 function generateAllSidebars() {
   const docsDir = path.join(__dirname, 'docs');
   const result = {};
+  
   const topLevelDirs = fs.readdirSync(docsDir).filter(file => {
     const stat = fs.statSync(path.join(docsDir, file));
-    return stat.isDirectory();
+    return stat.isDirectory() && !menuConfig.hiddenMenus.includes(file);
   });
 
   topLevelDirs.forEach(dir => {
@@ -116,6 +134,7 @@ function generateAllSidebars() {
  * Generate navbar items from docs folder structure
  * Returns array of navbar items auto-generated from top-level directories
  * Creates dropdown menus for group folders with sub-folders
+ * Respects hiddenMenus from menuConfig.json
  */
 function generateNavbarItems() {
   const docsDir = path.join(__dirname, 'docs');
@@ -125,7 +144,7 @@ function generateNavbarItems() {
   const topLevelDirs = fs.readdirSync(docsDir)
     .filter(file => {
       const stat = fs.statSync(path.join(docsDir, file));
-      return stat.isDirectory();
+      return stat.isDirectory() && !menuConfig.hiddenMenus.includes(file);
     })
     .sort();
 
