@@ -133,6 +133,7 @@ function generateNavbarItems() {
   const labelMap = {
     'ci-cd': 'CI/CD Ecosystem',
     'operations': 'Operations',
+    'gitops-best-practices': 'GitOps Best Practices',
   };
 
   topLevelDirs.forEach(dir => {
