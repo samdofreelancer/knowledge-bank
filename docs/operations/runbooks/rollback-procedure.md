@@ -326,7 +326,7 @@ VP Engineering notified
 
 - [Kubernetes Rollback Docs](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment)
 - [Helm Rollback](https://helm.sh/docs/helm/helm_rollback/)
-- [Database Backup Best Practices](../cicd/backup-strategy.md)
+- [Database Backup Best Practices](../../ci-cd/cicd/backup-strategy.md)
 
 ---
 

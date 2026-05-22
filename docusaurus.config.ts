@@ -2,6 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const {generateNavbarItems} = require('./genSidebars.js');
+const autoNavbarItems = generateNavbarItems();
+
 const config: Config = {
   title: 'DevOps Knowledge Bank',
   tagline: 'Comprehensive guide to modern DevOps practices, Kubernetes, GCP, and CI/CD',
@@ -65,49 +68,7 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          label: 'CI/CD Ecosystem',
-          position: 'left',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'kubernetesNav',
-              label: 'Kubernetes',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'gcpNav',
-              label: 'GCP',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'githubActionsNav',
-              label: 'GitHub Actions',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'jenkinsNav',
-              label: 'Jenkins',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'cicdNav',
-              label: 'CI/CD Practices',
-            },
-          ],
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'runbooksNav',
-          position: 'left',
-          label: 'Runbooks',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'troubleshootingNav',
-          position: 'left',
-          label: 'Troubleshooting',
-        },
+        ...autoNavbarItems,
         {
           to: '/blog',
           label: 'Blog',
@@ -128,19 +89,19 @@ const config: Config = {
           items: [
             {
               label: 'Kubernetes',
-              to: '/docs/kubernetes/overview',
+              to: '/docs/operations/kubernetes/overview',
             },
             {
               label: 'GCP',
-              to: '/docs/gcp/overview',
+              to: '/docs/ci-cd/gcp/overview',
             },
             {
               label: 'CI/CD',
-              to: '/docs/cicd/overview',
+              to: '/docs/ci-cd/cicd/overview',
             },
             {
               label: 'GitHub Actions',
-              to: '/docs/github-actions/overview',
+              to: '/docs/ci-cd/github-actions/overview',
             },
           ],
         },
@@ -149,15 +110,15 @@ const config: Config = {
           items: [
             {
               label: 'Runbooks',
-              to: '/docs/runbooks/overview',
+              to: '/docs/operations/runbooks/overview',
             },
             {
               label: 'Troubleshooting',
-              to: '/docs/troubleshooting/overview',
+              to: '/docs/operations/troubleshooting/overview',
             },
             {
               label: 'Jenkins Migration',
-              to: '/docs/jenkins/overview',
+              to: '/docs/ci-cd/jenkins/overview',
             },
             {
               label: 'Blog',

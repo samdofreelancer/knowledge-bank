@@ -15,7 +15,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
-            to="/docs/kubernetes/overview">
+            to="/docs/operations/kubernetes/overview">
             Get Started with Kubernetes →
           </Link>
         </div>
@@ -28,32 +28,32 @@ const FeatureList = [
   {
     title: '☸️ Kubernetes',
     description: 'Master container orchestration with comprehensive Kubernetes guides covering deployments, networking, storage, and production troubleshooting.',
-    link: '/docs/kubernetes/overview',
+    link: '/docs/operations/kubernetes/overview',
   },
   {
     title: '🔄 GitHub Actions',
     description: 'Modern CI/CD automation with GitHub Actions. Learn workflows, reusable workflows, self-hosted runners, and security best practices.',
-    link: '/docs/github-actions/overview',
+    link: '/docs/ci-cd/github-actions/overview',
   },
   {
     title: '🏗️ CI/CD',
     description: 'Continuous integration and deployment fundamentals. Pipeline design, testing strategies, deployment patterns, and best practices.',
-    link: '/docs/cicd/overview',
+    link: '/docs/ci-cd/cicd/overview',
   },
   {
     title: '☁️ GCP',
     description: 'Google Cloud Platform services and patterns. Cloud Run, GKE, BigQuery, Pub/Sub, and integration with CI/CD pipelines.',
-    link: '/docs/gcp/overview',
+    link: '/docs/ci-cd/gcp/overview',
   },
   {
     title: '🚨 Runbooks',
     description: 'Operational procedures for incident response. Step-by-step guides for production issues, rollbacks, scaling, and maintenance.',
-    link: '/docs/runbooks/overview',
+    link: '/docs/operations/runbooks/overview',
   },
   {
     title: '🔧 Troubleshooting',
     description: 'Diagnostic guides for common DevOps issues. Kubernetes problems, container issues, network troubleshooting, and more.',
-    link: '/docs/troubleshooting/overview',
+    link: '/docs/operations/troubleshooting/overview',
   },
 ];
 
@@ -119,22 +119,22 @@ export default function Home(): JSX.Element {
             <h2>Quick Navigation</h2>
             <div className="row">
               <div className={clsx('col col--3')}>
-                <Link to="/docs/kubernetes/deployment" className="button button--outline">
+                <Link to="/docs/operations/kubernetes/deployment" className="button button--outline">
                   Deploy with K8s
                 </Link>
               </div>
               <div className={clsx('col col--3')}>
-                <Link to="/docs/github-actions/workflow-basics" className="button button--outline">
+                <Link to="/docs/ci-cd/github-actions/workflow-basics" className="button button--outline">
                   Build with Actions
                 </Link>
               </div>
               <div className={clsx('col col--3')}>
-                <Link to="/docs/runbooks/production-incident" className="button button--outline">
+                <Link to="/docs/operations/runbooks/production-incident" className="button button--outline">
                   Incident Runbook
                 </Link>
               </div>
               <div className={clsx('col col--3')}>
-                <Link to="/docs/troubleshooting/overview" className="button button--outline">
+                <Link to="/docs/operations/troubleshooting/overview" className="button button--outline">
                   Troubleshoot
                 </Link>
               </div>
